@@ -1,0 +1,5 @@
+E:\UNI\A&DS\CheckersCLI\CheckersCLI\bin\Debug\CheckersCLI.exe
+E:\UNI\A&DS\CheckersCLI\CheckersCLI\bin\Debug\CheckersCLI.pdb
+E:\UNI\A&DS\CheckersCLI\CheckersCLI\obj\x86\Debug\CheckersCLI.csprojResolveAssemblyReference.cache
+E:\UNI\A&DS\CheckersCLI\CheckersCLI\obj\x86\Debug\CheckersCLI.exe
+E:\UNI\A&DS\CheckersCLI\CheckersCLI\obj\x86\Debug\CheckersCLI.pdb
