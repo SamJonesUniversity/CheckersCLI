@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BoardArray.cs" />
     <Compile Include="BoardDraw.cs" />
+    <Compile Include="Movement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
