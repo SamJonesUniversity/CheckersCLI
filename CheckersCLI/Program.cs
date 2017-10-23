@@ -17,7 +17,7 @@ namespace CheckersCLI
 
             //Initiate Variables
             int playerTurn = RNG.Next(1, 2); //Change 2 to 3
-            int[,] board = new int[4, 8];
+            int[,] board = new int[8, 8];
             bool gameOver = false;
             int humanPlayer = 0;
 
@@ -41,11 +41,12 @@ namespace CheckersCLI
                 {
                         draw.UpdateBoard(board);
                         Console.WriteLine("Player 1 turn");
-                        move.firstPoint();
+                        move.firstPoint(board, playerTurn);
 
                         Console.Clear();
                         playerTurn = 2;
                 }
+
                 else
                 {
                     draw.UpdateBoard(board);

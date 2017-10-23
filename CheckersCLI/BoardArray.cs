@@ -7,28 +7,37 @@ namespace CheckersCLI
 {
     class BoardArray
     {
-        public Array BoardCreate(int[,] board)
+        public int[,] BoardCreate(int[,] board)
         {
             int c = 0;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
                     c++;
-                    if (c == 9 || c == 11 || c == 13 || c == 15 || c == 18 || c == 20 || c == 22 || c == 24)
+                    if((i % 2 == 0 & j % 2 == 0) || (i % 2 != 0 & j % 2 != 0))
+                    {
+                        board[i, j] = 3;
+                    }
+
+                    else if (c >= 25 & c <= 40)
                     {
                         board[i, j] = 0;
                     }
-                    else if (i <= 1)
+
+                    else if (i <= 2)
                     {
                         board[i, j] = 1;
                     }
+
                     else
                     {
                         board[i, j] = 2;
                     }
+
                 }
             }
+
             return board;
         }
     }
