@@ -51,8 +51,8 @@ namespace CheckersCLI
                 {
                     draw.UpdateBoard(board);
                     Console.WriteLine("Player 2 turn");
+                    move.firstPoint(board, playerTurn);
 
-                    Console.ReadLine();
                     Console.Clear();
                     playerTurn = 1;
                 }
