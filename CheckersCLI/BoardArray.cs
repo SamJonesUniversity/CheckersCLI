@@ -9,7 +9,7 @@ namespace CheckersCLI
     {
         public int[,] BoardCreate(int[,] board)
         {
-            int c = 0;
+            /*int c = 0;
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -37,6 +37,24 @@ namespace CheckersCLI
 
                 }
             }
+
+            return board;
+            */
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+
+                        board[i, j] = 0;
+
+                }
+            }
+
+            board[6, 1] = 2;
+            board[3, 4] = 1;
+            board[6, 3] = 2;
+            board[4, 3] = 2;
 
             return board;
         }

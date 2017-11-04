@@ -10,9 +10,11 @@ namespace CheckersCLI
         static void Main(string[] args)
         {
             //Initiate Objects
+            winCondition winner = new winCondition();
             BoardArray nBoard = new BoardArray();
             BoardDraw draw = new BoardDraw();
             Movement move = new Movement();
+            kingMe king = new kingMe();
             Random RNG = new Random();
 
             //Initiate Variables
@@ -23,7 +25,7 @@ namespace CheckersCLI
 
             //Create a new board
             nBoard.BoardCreate(board);
-
+ 
             //
             while (humanPlayer < 1 || humanPlayer > 2)
             {
@@ -42,6 +44,18 @@ namespace CheckersCLI
                         draw.UpdateBoard(board);
                         Console.WriteLine("Player 1 turn");
                         move.firstPoint(board, playerTurn);
+                        king.kinged(board);
+
+                        if (winner.wonYet(board) == 1)
+                        {
+                            for(int i = 0; i < 20; i++)
+                            {
+                                Console.WriteLine("PLAYER 1 WINS!");
+                            }
+
+                            Console.Read();
+                            gameOver = true;
+                        }
 
                         Console.Clear();
                         playerTurn = 2;
@@ -52,12 +66,22 @@ namespace CheckersCLI
                     draw.UpdateBoard(board);
                     Console.WriteLine("Player 2 turn");
                     move.firstPoint(board, playerTurn);
+                    king.kinged(board);
+
+                    if (winner.wonYet(board) == 2)
+                    {
+                        for (int i = 0; i < 20; i++)
+                        {
+                            Console.WriteLine("PLAYER 2 WINS!");
+                        }
+
+                        Console.Read();
+                        gameOver = true;
+                    }
 
                     Console.Clear();
                     playerTurn = 1;
                 }
-
-                Console.ReadLine();
             }
         }
     }

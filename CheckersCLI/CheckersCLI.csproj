@@ -45,10 +45,12 @@
   <ItemGroup>
     <Compile Include="BoardArray.cs" />
     <Compile Include="BoardDraw.cs" />
+    <Compile Include="kingMe.cs" />
     <Compile Include="Movement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyChecker.cs" />
+    <Compile Include="winCondition.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
