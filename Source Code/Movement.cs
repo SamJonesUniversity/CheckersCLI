@@ -336,7 +336,7 @@ namespace CheckersCLI
                         //Validation for which direction to move.
                         if (player == 1 || coord[x, y] == player + 7)
                         {
-                            if (i < 7 & j > 0)
+                            if (x < 7 & y > 0)
                             {
                                 //Down to the left on the board.
                                 if (i == x + 1 & j == y - 1)
@@ -348,7 +348,7 @@ namespace CheckersCLI
                                 }
                             }
 
-                            if (i < 7 & j < 7)
+                            if (x < 7 & y < 7)
                             {
                                 //Down to the right on the board.
                                 if (i == x + 1 & j == y + 1)
@@ -364,7 +364,7 @@ namespace CheckersCLI
 
                         if (player == 2 || coord[i, j] == player + 7)
                         {
-                            if (i > 0 & j < 7)
+                            if (x > 0 & y < 7)
                             {
                                 //Up to the right on the board.
                                 if (i == x - 1 & j == y + 1)
@@ -376,7 +376,7 @@ namespace CheckersCLI
                                 }
                             }
 
-                            if (i > 0 & j > 0)
+                            if (x > 0 & y > 0)
                             {
                                 //Up to the left on the board.
                                 if (i == x - 1 & j == y - 1)

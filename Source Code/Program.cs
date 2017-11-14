@@ -98,7 +98,10 @@ namespace CheckersCLI
                     king.kinged(board);
                     Console.Clear();
 
-                    Console.Clear();
+                    if (redo.Count > 0)
+                    {
+                        redo.Clear();
+                    }
 
                     //Win condition.
                     if (winner.wonYet(board) == 1)
@@ -158,6 +161,11 @@ namespace CheckersCLI
                     //Check for posible kings on the board.
                     king.kinged(board);
                     Console.Clear();
+
+                    if (redo.Count > 0)
+                    {
+                        redo.Clear();
+                    }
 
                     //Win condition.
                     if (winner.wonYet(board) == 2)
